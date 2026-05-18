@@ -5,16 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Écrire une lettre</title>
-  <style>
-    body { font-size: 11px; }
-  </style>
 </head>
 
 <body class="bg-white text-[11px] text-gray-900 font-sans">
-  <div class="max-w-[980px] mx-auto min-h-screen flex">
+  <!-- Small Banner -->
+  <div class="bg-gradient-to-r from-pink-600 to-pink-400 text-white text-center py-2 px-4">
+    <p class="text-sm font-semibold">🔥 Trouvez l'amour à Madagascar ! Rejoignez-nous et rencontrez des personnes sincères près de chez vous.</p>
+  </div>
+
+  <!-- Banner Image -->
+  <div class="w-full h-32 md:h-48 bg-cover bg-center" style="background-image: url('../assets/img/bg-banner (1).jpg');">
+    <div class="w-full h-full bg-black bg-opacity-30 flex items-center justify-center">
+      <h1 class="text-white text-3xl md:text-5xl font-italic font-['Times_New_Romance']">
+        Dating<span class="text-pink-400">Mada</span>
+      </h1>
+    </div>
+  </div>
+
+  <div class="p-8 mx-auto min-h-screen flex">
 
     <!-- Sidebar -->
-    <aside class="w-[220px] pt-16 px-6">
+    <aside class="w-[310px] pt-16 px-6">
       <button class="w-full h-8 border border-lime-600 rounded shadow-md text-gray-400 font-bold">
         S'abonner
       </button>
@@ -59,13 +70,14 @@
         </a>
       </nav>
 
-      <h1 class="text-[22px] font-bold mb-3">Écrivez une lettre à Wenhan maintenant</h1>
+      <h1 class="text-[22px] font-bold mb-3" id="profile-title">Écrivez une lettre à Wenhan maintenant</h1>
 
       <!-- Profile block -->
       <section class="flex justify-between">
         <div class="flex gap-3">
           <div>
             <img
+              id="profile-img"
               src="https://via.placeholder.com/80x110"
               alt="Wenhan"
               class="w-[80px] h-[110px] object-cover border border-gray-500"
@@ -74,8 +86,8 @@
           </div>
 
           <div>
-            <p class="text-red-600 text-base">Wenhan</p>
-            <p class="font-bold text-base leading-4">ID : 1537491</p>
+            <p class="text-red-600 text-base" id="profile-name">Wenhan</p>
+            <p class="font-bold text-base leading-4">ID : <span id="profile-id">1537491</span></p>
 
             <button class="mt-2 border border-gray-400 w-[90px] h-7 text-[10px] font-bold leading-3">
               Chat en<br>direct
@@ -106,7 +118,7 @@
       </div>
 
       <p class="mt-8 max-w-[690px]">
-        Pour envoyer une lettre à un Wenhan, veuillez entrer votre message dans la zone de texte ci-dessous et cliquez sur "Envoyer".
+        Pour envoyer une lettre à <span id="profile-name2">Wenhan</span>, veuillez entrer votre message dans la zone de texte ci-dessous et cliquez sur "Envoyer".
         Vous pouvez également joindre des photos à votre lettre.
       </p>
 
@@ -144,5 +156,35 @@
       </section>
     </main>
   </div>
+
+  <script>
+    // Get member data from URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const memberId = urlParams.get('id') || 1;
+
+    // Member data with local images
+    const members = {
+      1: { name: 'Zuhra', age: 33, id: '1537491', img: '../assets/img/gasy/1.jpg' },
+      2: { name: 'Aïda', age: 21, id: '1537492', img: '../assets/img/gasy/2.jpg' },
+      3: { name: 'Black nadia', age: 36, id: '1537493', img: '../assets/img/gasy/3.webp' },
+      4: { name: 'Chantal', age: 23, id: '1537494', img: '../assets/img/gasy/4.jfif' },
+      5: { name: 'Wendy cathalina', age: 21, id: '1537495', img: '../assets/img/gasy/5.jpg' },
+      6: { name: 'Aïcha', age: 21, id: '1537496', img: '../assets/img/gasy/6.jfif' },
+      7: { name: 'Alicia', age: 26, id: '1537497', img: '../assets/img/gasy/7.jfif' },
+      8: { name: 'Prisca', age: 21, id: '1537498', img: '../assets/img/gasy/8.jfif' },
+      9: { name: 'Sariaka', age: 21, id: '1537499', img: '../assets/img/gasy/9.jfif' },
+      10: { name: 'Mendrika', age: 26, id: '1537500', img: '../assets/img/gasy/10.jfif' },
+    };
+
+    const member = members[memberId] || members[1];
+
+    // Update page with member data
+    document.getElementById('profile-title').textContent = `Écrivez une lettre à ${member.name} maintenant`;
+    document.getElementById('profile-name').textContent = member.name;
+    document.getElementById('profile-name2').textContent = member.name;
+    document.getElementById('profile-id').textContent = member.id;
+    document.getElementById('profile-img').src = member.img;
+    document.getElementById('profile-img').alt = member.name;
+  </script>
 </body>
 </html>
