@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Écrire une lettre</title>
+  <style>
+    body { font-size: 11px; }
+  </style>
+</head>
+
+<body class="bg-white text-[11px] text-gray-900 font-sans">
+  <div class="max-w-[980px] mx-auto min-h-screen flex">
+
+    <!-- Sidebar -->
+    <aside class="w-[220px] pt-16 px-6">
+      <button class="w-full h-8 border border-lime-600 rounded shadow-md text-gray-400 font-bold">
+        S'abonner
+      </button>
+
+      <div class="mt-8">
+        <h3 class="text-red-700 font-bold text-sm mb-2">E-mails</h3>
+        <a class="block text-blue-900 underline text-sm">Inbox <span class="float-right text-xs">37</span></a>
+        <a class="block text-blue-900 underline text-sm mt-2">Sent Mail</a>
+        <a class="block text-blue-900 underline text-sm mt-2">Courrier supprimé</a>
+        <a class="block text-blue-900 underline text-sm mt-2 leading-4">Composer un nouveau<br>courrier</a>
+      </div>
+
+      <div class="mt-6">
+        <h3 class="text-red-700 font-bold text-sm mb-2">Dames</h3>
+        <a class="block text-blue-900 underline text-sm">Online Ladies <span class="float-right text-xs">2501</span></a>
+        <a class="block text-blue-900 underline text-sm mt-2">My Contact List</a>
+        <a class="block text-blue-900 underline text-sm mt-2">Search</a>
+      </div>
+
+      <div class="mt-6">
+        <h3 class="text-red-700 font-bold text-sm mb-2">Prestations de service</h3>
+        <div class="border border-gray-200 p-2 w-full">
+          <a class="text-blue-900 underline text-sm">Chat en direct</a>
+          <span class="float-right underline text-[10px]">Comparer</span>
+          <a class="block text-blue-900 underline text-sm mt-1">CamShare</a>
+        </div>
+        <a class="block text-blue-900 underline text-sm mt-3">Flowers & Presents</a>
+        <a class="block text-blue-900 underline text-sm mt-3">Call Me</a>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="flex-1 pt-4 px-4">
+      <!-- Top nav -->
+      <nav class="flex justify-end gap-10 text-gray-400 mb-5 pr-4">
+        <a>My Account</a>
+        <a>Émissions</a>
+        <a>Chercher</a>
+        <a class="flex items-center gap-2">
+          <span class="w-6 h-6 bg-gray-200 rounded-full inline-block"></span>
+          Mon profil
+        </a>
+      </nav>
+
+      <h1 class="text-[22px] font-bold mb-3">Écrivez une lettre à Wenhan maintenant</h1>
+
+      <!-- Profile block -->
+      <section class="flex justify-between">
+        <div class="flex gap-3">
+          <div>
+            <img
+              src="https://via.placeholder.com/80x110"
+              alt="Wenhan"
+              class="w-[80px] h-[110px] object-cover border border-gray-500"
+            />
+            <div class="text-center text-[9px] text-gray-500 font-bold">EN LIGNE</div>
+          </div>
+
+          <div>
+            <p class="text-red-600 text-base">Wenhan</p>
+            <p class="font-bold text-base leading-4">ID : 1537491</p>
+
+            <button class="mt-2 border border-gray-400 w-[90px] h-7 text-[10px] font-bold leading-3">
+              Chat en<br>direct
+            </button>
+
+            <a class="block text-blue-900 underline mt-1">Envoyer un cadeau virtuel</a>
+            <a class="block text-blue-900 underline mt-1">Profil d'impression</a>
+
+            <div class="flex items-center mt-1 gap-1">
+              <span class="text-yellow-400 text-2xl">★</span>
+              <a class="text-blue-900 underline">Ajouter à la liste de contacts</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-2 h-fit mt-1">
+          <button class="border border-blue-100 w-[145px] h-7 font-bold text-blue-900 underline">Profil</button>
+          <button class="border border-blue-100 w-[145px] h-7 font-bold text-blue-900 underline">Photos</button>
+          <button class="border border-blue-100 w-[145px] h-7 font-bold text-blue-900 underline">Interview</button>
+        </div>
+      </section>
+
+      <!-- Tabs -->
+      <div class="mt-4 flex gap-20 border-t-4 border-red-900 pt-2 w-[650px]">
+        <a class="text-red-700 font-bold">Envoyez moi un email</a>
+        <a class="text-blue-900 underline font-bold">Envoyer un cadeau virtuel</a>
+        <a class="text-blue-900 underline font-bold">Appelez-moi</a>
+      </div>
+
+      <p class="mt-8 max-w-[690px]">
+        Pour envoyer une lettre à un Wenhan, veuillez entrer votre message dans la zone de texte ci-dessous et cliquez sur "Envoyer".
+        Vous pouvez également joindre des photos à votre lettre.
+      </p>
+
+      <!-- Form -->
+      <section class="mt-5">
+        <div class="flex justify-between items-center">
+          <h2 class="text-xl text-[#8b3f00]">Écrire un email</h2>
+          <a class="text-blue-900 underline text-[10px]">❔ Regardez une vidéo sur la façon d'envoyer du courrier</a>
+        </div>
+
+        <label class="block text-[#8b3f00] mt-5 mb-1">Votre message</label>
+        <textarea class="w-full h-[180px] border border-gray-300 resize-none p-2"></textarea>
+
+        <p class="mt-1">
+          20000 caractères restants · 10 crédits seront déduits de votre compte pour l'envoi de la lettre.
+        </p>
+
+        <a class="block text-blue-900 underline mt-3">Joignez vos photos</a>
+
+        <div class="mt-2 flex items-center gap-3">
+          <span>Dossier</span>
+          <input type="file" class="text-xs" />
+        </div>
+
+        <p class="mt-3 max-w-[620px] text-[10px] leading-4">
+          Fichiers au format GIF, JPG et PNG d'une taille maximale de 4096 Ko.
+          Joindre une photo gratuitement. 10 crédits seront déduits de votre compte pour chaque photo supplémentaire.
+        </p>
+
+        <div class="mt-6 text-center">
+          <button class="border border-gray-400 bg-gray-100 px-12 py-1 rounded font-bold">
+            Envoyer
+          </button>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

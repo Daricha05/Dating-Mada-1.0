@@ -1,0 +1,84 @@
+.main-content{
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    grid-gap: 25px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.leftAside {
+    height: 500px;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.mail h3{
+    padding-left: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #72064e;
+}
+
+.mail ul a{
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    padding: 7px 0;
+}
+
+.mail ul li{
+    list-style-type: none;
+}
+
+.mail-aside {
+    height: 100vh;
+    overflow: scroll;
+}
+
+.box_content{
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 0.5fr;
+    grid-gap: 30px;
+}
+
+
+.box_description img{
+    width: 200px;
+    height: 230px;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 992px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    .leftAside,
+    .mail-aside {
+        height: auto;
+        max-height: none;
+        overflow: visible;
+    }
+
+    .box_content {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .box_description {
+        display: block !important;
+    }
+
+    .box_description img {
+        width: 100%;
+        height: auto;
+        max-height: 320px;
+    }
+
+    .desc {
+        margin-top: 12px;
+    }
+}
