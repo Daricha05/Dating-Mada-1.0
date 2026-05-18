@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,7 +11,8 @@
 <body class="bg-white text-[11px] text-gray-900 font-sans">
   <!-- Small Banner -->
   <div class="bg-gradient-to-r from-pink-600 to-pink-400 text-white text-center py-2 px-4">
-    <p class="text-sm font-semibold">🔥 Trouvez l'amour à Madagascar ! Rejoignez-nous et rencontrez des personnes sincères près de chez vous.</p>
+    <p class="text-sm font-semibold">🔥 Trouvez l'amour à Madagascar ! Rejoignez-nous et rencontrez des personnes
+      sincères près de chez vous.</p>
   </div>
 
   <!-- Banner Image -->
@@ -35,7 +37,7 @@
         <a class="block text-blue-900 underline text-sm">Inbox <span class="float-right text-xs">37</span></a>
         <a class="block text-blue-900 underline text-sm mt-2">Sent Mail</a>
         <a class="block text-blue-900 underline text-sm mt-2">Courrier supprimé</a>
-        <a class="block text-blue-900 underline text-sm mt-2 leading-4">Composer un nouveau<br>courrier</a>
+        <a class="block text-blue-900 underline text-sm mt-2 leading-4">Composer un nouveau courrier</a>
       </div>
 
       <div class="mt-6">
@@ -76,37 +78,28 @@
       <section class="flex justify-between">
         <div class="flex gap-3">
           <div>
-            <img
-              id="profile-img"
-              src="https://via.placeholder.com/80x110"
-              alt="Wenhan"
-              class="w-[80px] h-[110px] object-cover border border-gray-500"
-            />
-            <div class="text-center text-[9px] text-gray-500 font-bold">EN LIGNE</div>
+            <img id="profile-img" src="https://via.placeholder.com/180x210" alt="Wenhan"
+              class="w-[180px] h-[210px] object-cover border border-gray-500" />
+            <div class="text-center text-[11px] text-green-500 font-bold mt-2">EN LIGNE</div>
           </div>
 
           <div>
             <p class="text-red-600 text-base" id="profile-name">Wenhan</p>
-            <p class="font-bold text-base leading-4">ID : <span id="profile-id">1537491</span></p>
 
-            <button class="mt-2 border border-gray-400 w-[90px] h-7 text-[10px] font-bold leading-3">
-              Chat en<br>direct
-            </button>
-
-            <a class="block text-blue-900 underline mt-1">Envoyer un cadeau virtuel</a>
-            <a class="block text-blue-900 underline mt-1">Profil d'impression</a>
-
-            <div class="flex items-center mt-1 gap-1">
-              <span class="text-yellow-400 text-2xl">★</span>
-              <a class="text-blue-900 underline">Ajouter à la liste de contacts</a>
+            <div class="my-4">
+              <p class="font-bold text-base leading-4">ID : <span id="profile-id">1537491</span></p>
+              <p class="text-sm mt-1">Âge : 33 ans</p>
             </div>
+
+            <button class="mt-2 border border-lime-600 rounded shadow-md px-6 h-7 text-[10px] font-bold leading-3">
+              Chat en direct
+            </button>
           </div>
         </div>
 
         <div class="grid grid-cols-2 gap-2 h-fit mt-1">
-          <button class="border border-blue-100 w-[145px] h-7 font-bold text-blue-900 underline">Profil</button>
+          <button class="border border-blue-100 w-[145px] h-7 font-bold text-blue-900 underline">Ajouter</button>
           <button class="border border-blue-100 w-[145px] h-7 font-bold text-blue-900 underline">Photos</button>
-          <button class="border border-blue-100 w-[145px] h-7 font-bold text-blue-900 underline">Interview</button>
         </div>
       </section>
 
@@ -117,18 +110,13 @@
         <a class="text-blue-900 underline font-bold">Appelez-moi</a>
       </div>
 
-      <p class="mt-8 max-w-[690px]">
-        Pour envoyer une lettre à <span id="profile-name2">Wenhan</span>, veuillez entrer votre message dans la zone de texte ci-dessous et cliquez sur "Envoyer".
+      <p class="mt-8">
+        Pour envoyer une lettre à <span id="profile-name2">Wenhan</span>, veuillez entrer votre message dans la zone de texte ci-dessous et cliquez sur "Envoyer". <br>
         Vous pouvez également joindre des photos à votre lettre.
       </p>
 
       <!-- Form -->
       <section class="mt-5">
-        <div class="flex justify-between items-center">
-          <h2 class="text-xl text-[#8b3f00]">Écrire un email</h2>
-          <a class="text-blue-900 underline text-[10px]">❔ Regardez une vidéo sur la façon d'envoyer du courrier</a>
-        </div>
-
         <label class="block text-[#8b3f00] mt-5 mb-1">Votre message</label>
         <textarea class="w-full h-[180px] border border-gray-300 resize-none p-2"></textarea>
 
@@ -187,4 +175,5 @@
     document.getElementById('profile-img').alt = member.name;
   </script>
 </body>
+
 </html>
